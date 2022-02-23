@@ -62,7 +62,7 @@ abstract class MaxmindDriver extends AbstractGeoIPDriver
     public function getRaw($ip)
     {
         try {
-            return $this->maxmind->city($ip);
+            return $this->maxmind->country($ip);
         } catch (AddressNotFoundException $e) {
             // ignore
         }
